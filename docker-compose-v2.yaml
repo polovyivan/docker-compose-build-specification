@@ -1,12 +1,14 @@
 services:
   customer-app:
+    image: polovyiivan/spring-customer-app-v2:latest
     ports:
       - "8001:8001"
     build:
       context: ./spring-customer-app
-#      dockerfile: ./Dockerfile
+      dockerfile: ./Dockerfile
       no_cache: true
       labels:
         label_name: "test-build"
       tags:
-        - "spring-customer-app:latest"
+        - "spring-customer-app-v2:latest"
+        - "polovyiivan/spring-customer-app-v2:latest"
